@@ -1,5 +1,5 @@
 ---
-title: Snu Shaman
+title: SHA:MAN
 emoji: 🌍
 colorFrom: purple
 colorTo: red

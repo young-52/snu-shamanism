@@ -1,0 +1,25 @@
+[project]
+name = "snu-shaman"
+version = "0.1.0"
+description = "A fortune chatbot service for SNU"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "gradio[oauth]>=6.12.0",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.15.10"]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
