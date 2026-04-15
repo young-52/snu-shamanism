@@ -8,11 +8,11 @@
     - 부족한 기운(용신)을 도출하여 추천 시스템에 전달.
 
 ## 2. The Persona: LLM Reasoning & RAG Lead
-- **Primary Goal**: `huggingface_hub` Inference API를 활용하여 영험하고 위트 있는 대화 인터페이스 구현.
+- **Primary Goal**: `huggingface_hub` Inference API를 활용하여 친근하고 신뢰감 있는 대화 인터페이스 구현.
 - **Responsibilities**:
     - `locations_explained.json` 및 `cafes2.json` 데이터를 기반으로 한 RAG(Retrieval-Augmented Generation) 로직 설계.
     - 오행 상생상극(목생화, 토극수 등)에 기반한 추천 사유 생성 프롬프트 엔지니어링.
-    - 서울대생 맞춤형 유머와 무속인 페르소나의 일관성 유지.
+    - 현대적이고 일상적인 높임체(~합니다, ~드립니다) 톤의 일관성 유지.
 
 ## 3. UI Sorcerer: Gradio Layout & UX Designer
 - **Primary Goal**: Gradio 6.x 환경에서의 최적화된 사용자 인터페이스 구축 및 커스텀 테마 적용.
