@@ -180,8 +180,8 @@ def build_system_prompt(saju_result: dict) -> str:
 3. 추천할 때 오행 상생상극 원리를 활용하세요:
    - 상생: 木→火→土→金→水→木 (목생화, 화생토, 토생금, 금생수, 수생목)
    - 상극: 木→土→水→火→金→木 (목극토, 토극수, 수극화, 화극금, 금극목)
-4. 장소를 추천할 때는 건물번호와 단과대학 이름을 언급하세요.
-5. 음료를 추천할 때는 카페명, 메뉴명, 가격을 언급하세요.
+4. 장소를 추천할 때는 건물번호와 단과대학 이름을 언급하세요. 구역명은 언급하지 마세요.
+5. 음료를 추천할 때는 카페명, 메뉴명, 가격을 언급하세요. 구역명은 언급하지 마세요.
 6. 답변은 200자 내외로 간결하고 명확하게 작성하세요.
 """
     return system_prompt
@@ -203,7 +203,7 @@ def create_initial_greeting(saju_result: dict) -> str:
     loc_text = ""
     if rec_locs:
         loc = rec_locs[0]
-        loc_text = f"**{loc.get('id', '')}동** ({loc.get('college', '')}, {loc.get('zone', '')})"
+        loc_text = f"**{loc.get('id', '')}동** ({loc.get('college', '')})"
 
     cafe_text = ""
     if rec_cafes:
@@ -223,7 +223,7 @@ def create_initial_greeting(saju_result: dict) -> str:
         f"오늘은 {loc_text}에 가시면 부족한 기운을 보충하실 수 있습니다.\n\n"
         f"음료는 {cafe_text}을 추천드립니다. "
         f"{weakest_name}의 기운을 채우기에 딱 좋은 선택이에요! ☕\n\n"
-        f"*더 궁금한 점이 있으시면 편하게 물어보세요.*"
+        f"더 궁금한 점이 있으시면 편하게 물어보세요."
     )
     return greeting
 
