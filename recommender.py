@@ -257,7 +257,7 @@ def get_llm_response(
 
     client = InferenceClient(
         token=token,
-        model="Qwen/Qwen2.5-72B-Instruct",
+        model="openai/gpt-oss-20b",
     )
 
     messages = [{"role": "system", "content": system_prompt}]
